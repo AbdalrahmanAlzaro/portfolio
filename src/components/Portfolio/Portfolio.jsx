@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import css from "./Portfolio.module.scss";
-import image from "../../assets/pro1.png";
-import image1 from "../../assets/pro2.png";
-import image2 from "../../assets/pro3.png";
+import pro1Image from "../../assets/Pro1.png";
+import pro2Image from "../../assets/pro2.png";
+import pro3Image from "../../assets/pro3.png";
 import {
   fadeIn,
   staggerChildren,
@@ -47,18 +47,18 @@ const Portfolio = () => {
         <div className={`flexCenter ${css.showCase}`}>
           <motion.img
             variants={fadeIn("up", "tween", 0.7, 0.6)}
-            src={image}
+            src={pro1Image}
             alt="project"
           />
 
           <motion.img
             variants={fadeIn("up", "tween", 0.7, 0.6)}
-            src={image1}
+            src={pro2Image}
             alt="project"
           />
           <motion.img
             variants={fadeIn("up", "tween", 0.9, 0.6)}
-            src={image2}
+            src={pro3Image}
             alt="project"
           />
         </div>
