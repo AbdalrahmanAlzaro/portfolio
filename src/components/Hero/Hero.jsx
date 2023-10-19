@@ -2,7 +2,7 @@ import React from "react";
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Hero.module.scss";
 import { motion } from "framer-motion";
-import image from "../../assets/IMG_4966-removebg-preview.png";
+import image from "../../assets/IMG_1699.png";
 const Hero = () => {
   return (
     <section className={`paddings ${css.wrapper}`}>
