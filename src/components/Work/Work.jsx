@@ -1,17 +1,29 @@
 import React from "react";
 import { workExp } from "../../utils/data";
 import css from "./Work.module.scss";
-import {motion} from 'framer-motion'
-import { draw, fadeIn, slideIn, staggerChildren, textVariant2, zoomIn } from "../../utils/motion";
+import { motion } from "framer-motion";
+import {
+  draw,
+  fadeIn,
+  slideIn,
+  staggerChildren,
+  textVariant2,
+  zoomIn,
+} from "../../utils/motion";
 const Work = () => {
   return (
-    <motion.section 
-    variants={staggerChildren}
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: false, amount: 0.25 }}
-    className={`paddings ${css.wrapper}`}>
-    <a className="anchor" id="work"></a>
+    <motion.section
+      style={{
+        backgroundColor:
+          "linear-gradient(90deg, rgba(248,247,241,1) 36%, rgba(140,151,153,1) 100%)",
+      }}
+      variants={staggerChildren}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className={`paddings ${css.wrapper}`}
+    >
+      <a className="anchor" id="work"></a>
 
       <div className={`innerWidth flexCenter ${css.container}`}>
         {/* heading */}
@@ -20,7 +32,11 @@ const Work = () => {
         <div className={`flexCenter ${css.experiences}`}>
           {workExp.map((exp, i) => {
             return (
-              <motion.div variants={textVariant2} key={i} className={`flexCenter ${css.exp}`}>
+              <motion.div
+                variants={textVariant2}
+                key={i}
+                className={`flexCenter ${css.exp}`}
+              >
                 <div className={css.post}>
                   <h1>{exp.place}</h1>
                   <p>{exp.tenure}</p>
@@ -33,14 +49,30 @@ const Work = () => {
             );
           })}
 
-
           <motion.div variants={zoomIn(1, 1)} className={css.progressbar}>
-            <motion.div variants={fadeIn("down", "tween", 2, 1.5)} className={css.line}></motion.div>
-            <div><div className={css.circle} style={{background: "#286F6C"}}></div></div>
-            <div><div className={css.circle} style={{background: "#F2704E"}}></div></div>
-            <div><div className={css.circle} style={{background: "#EEC048"}}></div></div>
+            <motion.div
+              variants={fadeIn("down", "tween", 2, 1.5)}
+              className={css.line}
+            ></motion.div>
+            <div>
+              <div
+                className={css.circle}
+                style={{ background: "#286F6C" }}
+              ></div>
+            </div>
+            <div>
+              <div
+                className={css.circle}
+                style={{ background: "#F2704E" }}
+              ></div>
+            </div>
+            <div>
+              <div
+                className={css.circle}
+                style={{ background: "#EEC048" }}
+              ></div>
+            </div>
           </motion.div>
-
         </div>
       </div>
     </motion.section>

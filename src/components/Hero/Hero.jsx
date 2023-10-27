@@ -17,6 +17,10 @@ const Hero = () => {
           <motion.span
             className="primaryText"
             variants={fadeIn("right", "tween", 0.2, 1)}
+            style={{
+              WebkitTextStroke: "2npm run biuldpx black", // For Webkit (Safari and Chrome)
+              textStroke: "20px black", // For other browsers
+            }}
           >
             Hey There,
             <br />
