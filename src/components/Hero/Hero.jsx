@@ -18,8 +18,8 @@ const Hero = () => {
             className="primaryText"
             variants={fadeIn("right", "tween", 0.2, 1)}
             style={{
-              WebkitTextStroke: "2npm run biuldpx black", // For Webkit (Safari and Chrome)
-              textStroke: "20px black", // For other browsers
+              WebkitTextStroke: "1px black", // For Webkit (Safari and Chrome)
+              textStroke: "15px black", // For other browsers
             }}
           >
             Hey There,
@@ -68,7 +68,16 @@ const Hero = () => {
             variants={fadeIn("left", "tween", 0.5, 1)}
             className={css.certificate}
           >
-            <img src="./certificate.png" alt="" />
+            <img
+              src="./certificate.png"
+              alt=""
+              style={{
+                transition: "transform 0.3s ease-in-out",
+                ":hover": {
+                  transform: "rotate(360deg)",
+                },
+              }}
+            />
             <span>CERTIFIED PROFATIONAL</span>
             <span>FULL STACK WEP DEVELOPER</span>
           </motion.div>
