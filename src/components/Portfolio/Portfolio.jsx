@@ -36,6 +36,7 @@ const Portfolio = () => {
             {" "}
             <a
               href="https://github.com/AbdalrahmanAlzaro"
+              target="blank"
               style={{ color: "#eec048" }}
             >
               {" "}
