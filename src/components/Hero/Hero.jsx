@@ -19,8 +19,8 @@ const Hero = () => {
             className="primaryText"
             variants={fadeIn("right", "tween", 0.2, 1)}
             style={{
-              WebkitTextStroke: "1px black", // For Webkit (Safari and Chrome)
-              textStroke: "15px black", // For other browsers
+              WebkitTextStroke: "3px black", // For Webkit (Safari and Chrome)
+              textStroke: "55px black", // For other browsers
             }}
           >
             Hey There,
