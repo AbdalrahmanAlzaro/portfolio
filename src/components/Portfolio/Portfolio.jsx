@@ -18,6 +18,10 @@ const Portfolio = () => {
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
       className={`paddings ${css.wrapper}`}
+      style={{
+        background:
+          "radial-gradient(circle, rgba(248,247,241,1) 71%, rgba(140,151,153,1) 100%)",
+      }}
     >
       <a className="anchor" id="portfolio"></a>
 

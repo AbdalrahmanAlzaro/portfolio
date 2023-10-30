@@ -5,7 +5,13 @@ import { motion } from "framer-motion";
 import { fadeIn, staggerContainer, textVariant } from "../../utils/motion.js";
 const Experties = () => {
   return (
-    <section className={css.wrapper}>
+    <section
+      className={css.wrapper}
+      style={{
+        background:
+          "radial-gradient(circle, rgba(248,247,241,1) 71%, rgba(140,151,153,1) 100%)",
+      }}
+    >
       <a className="anchor" id="experties"></a>
       <motion.div
         variants={staggerContainer}

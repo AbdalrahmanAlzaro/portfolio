@@ -10,6 +10,10 @@ const Footer = () => {
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
       className={`paddings ${css.wrapper}`}
+      style={{
+        background:
+          "linear-gradient(90deg, rgba(248, 247, 241, 1) 36%, rgba(140, 151, 153, 1) 100%)",
+      }}
     >
       <motion.div
         variants={footerVariants}

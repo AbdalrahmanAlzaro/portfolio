@@ -1,8 +1,9 @@
-import React from "react";
 import { fadeIn, slideIn, staggerContainer } from "../../utils/motion";
 import css from "./Hero.module.scss";
 import { motion } from "framer-motion";
 import image from "../../assets/IMG_1699.png";
+import certificateImage from "../../assets/certificate.png"; // Import the certificate image
+
 const Hero = () => {
   return (
     <section className={`paddings ${css.wrapper}`}>
@@ -27,12 +28,15 @@ const Hero = () => {
             I'm Abd alrahman.
           </motion.span>
           <motion.span
-            className="secondaryText"
+            className={`secondaryText ${css.meltText}`} // Apply the CSS class for melting text
             variants={fadeIn("left", "tween", 0.4, 1)}
+            initial={{ opacity: 0, y: 20 }} // Initial opacity and y-position
+            animate={{ opacity: 1, y: 0 }} // Target opacity and y-position
+            transition={{ duration: 1, delay: 0.4 }} // Duration and delay of the animation
           >
-            I Full stack web developer
+            I'm a Full-stack web developer
             <br />
-            (MERN Stack) , And I love what i do{" "}
+            (MERN Stack) and I love what I do.
           </motion.span>
         </div>
 
@@ -40,12 +44,29 @@ const Hero = () => {
           variants={fadeIn("up", "tween", 0.3, 1)}
           className={css.person}
         >
-          <motion.img
-            variants={slideIn("up", "tween", 0.5, 1.3)}
-            src={image}
-            alt=""
-            style={{ height: "30rem" }}
-          />
+          <div className={css.imageContainer}>
+            <motion.img
+              variants={slideIn("up", "tween", 0.5, 1.3)}
+              src={image}
+              alt=""
+              style={{ height: "30rem" }}
+            />
+            <img
+              className={css.reflection}
+              src={image}
+              alt=""
+              style={{
+                width: "23rem",
+                height: "30rem",
+                position: "absolute",
+                top: "0",
+                left: "3rem",
+                // height: "30rem",
+                transform: "scaleY(1)",
+                opacity: 0.3,
+              }}
+            />
+          </div>
         </motion.div>
 
         <a className={css.email} href="mailto:abdalrahman.h.alzaro@gmail.com">
@@ -69,17 +90,12 @@ const Hero = () => {
             className={css.certificate}
           >
             <img
-              src="./certificate.png"
+              className={css.rotatedCertificate}
+              src={certificateImage}
               alt=""
-              style={{
-                transition: "transform 0.3s ease-in-out",
-                ":hover": {
-                  transform: "rotate(360deg)",
-                },
-              }}
             />
-            <span>CERTIFIED PROFATIONAL</span>
-            <span>FULL STACK WEP DEVELOPER</span>
+            <span>CERTIFIED PROFESSIONAL</span>
+            <span>FULL STACK WEB DEVELOPER</span>
           </motion.div>
         </div>
       </motion.div>
